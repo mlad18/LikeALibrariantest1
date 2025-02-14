@@ -1,0 +1,8 @@
+{
+    "errorLens.codeLensEnabled": true,
+    "intellicode-completions-cdk.loggingLevel": "ALL",
+    "diffEditor.codeLens": true,
+    "editor.inlineSuggest.syntaxHighlightingEnabled": true,
+    "editor.suggest.preview": true,
+    "files.autoSaveWhenNoErrors": true
+}
