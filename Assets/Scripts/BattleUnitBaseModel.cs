@@ -28,38 +28,10 @@ public class BattleUnitBaseModel : BattleObjectModel
             this._elapsedRetargeting = 0f;
         }
     }
-    protected virtual void OnFixedUpdateSkill(float deltaTime)
-    {
-    }
-    protected virtual void OnDie(bool callEvent = true)
-    {
-    }
-    public virtual void Damage()
-    {
-    }
-    public virtual void AtkStart()
-    {
-    }
-    public virtual void AtkEnd()
-    {   
-    }
-    public bool IsCasting
-    {
-        get
-        {
-            return this.bCasting;
-        }
-    }
-    public virtual void CastSkill()
-    {
-    }
-    public virtual void AfterAttackSuccess(bool killed, BattleUnitModel attackedUnit)
-    {
-    }
-    
+
     protected bool _isDead;
     protected bool _isExtinction;
     private float _elapsedRetargeting;
     private bool _retarget;
-    protected bool bCasting;
+    
 }

@@ -26,8 +26,33 @@ public class BattleUnitModel : BattleUnitBaseModel
         }
         return num2;
     }
+    public void SetSprite(string x)
+    {
+        switch (x)
+        {
+           case "N":
+           this.GetComponent<SpriteRenderer>().sprite = N;
+           break;
+           case "M":
+           this.GetComponent<SpriteRenderer>().sprite = M;
+           break;
+           case "S":
+           this.GetComponent<SpriteRenderer>().sprite = S;
+           break;
+           case "G":
+           this.GetComponent<SpriteRenderer>().sprite = G;
+           break;
+           case "E":
+           this.GetComponent<SpriteRenderer>().sprite = E;
+           break;
+           default:
+           this.GetComponent<SpriteRenderer>().sprite = N;
+           break;
+        }
+    }
     public void Die()
     {
+        Debug.Log("Unit Dead");
         this._isDead = true;
     }
     public int MaxHp;
@@ -35,5 +60,10 @@ public class BattleUnitModel : BattleUnitBaseModel
     public float hp;
 
     public Image healthbar;
+    public Sprite N;
+    public Sprite M;
+    public Sprite S;
+    public Sprite G;
+    public Sprite E;
 
 }

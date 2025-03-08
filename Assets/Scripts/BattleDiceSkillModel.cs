@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Game_DiceSystem;
 
-public class BattleDiceSkillModel : MonoBehaviour
+public class BattleDiceSkillModel
 {
     public DiceSkillXmlInfo XmlData
     {
@@ -23,6 +23,14 @@ public class BattleDiceSkillModel : MonoBehaviour
     {
         return _xmlData.Name;
     }
+    public static BattleDiceSkillModel XmlLoader(int id)
+    {
+        List<DiceSkillXmlInfo> list = new List<DiceSkillXmlInfo>();
+        BattleDiceSkillModel battleDiceSkillModel = new BattleDiceSkillModel();
+        list.AddRange(battleDiceSkillModel.loader.LoadSkill());
+        DiceSkillXmlInfo info = list.Find((DiceSkillXmlInfo x) => x._id == id);
+        return CreatePlayingSkill(info);
+    }
     public static BattleDiceSkillModel CreatePlayingSkill(DiceSkillXmlInfo skillInfo)
     {
         BattleDiceSkillModel battleDiceSkillModel = new BattleDiceSkillModel();
@@ -32,19 +40,20 @@ public class BattleDiceSkillModel : MonoBehaviour
     }
     public List<BattleDiceBehaviour> CreateDiceSkillBehaviourList()
     {
-        List<BattleDiceBehaviour> list = new List<BattleDiceBehaviour>();
+    List<BattleDiceBehaviour> list = new List<BattleDiceBehaviour>();
 	int num = 0;
 	foreach (DiceBehaviour diceBehaviour in this._xmlData.DiceBehaviourList)
 	{
 		string script = diceBehaviour.Script;
 		BattleDiceBehaviour battleDiceBehavior = new BattleDiceBehaviour();
-		battleDiceBehavior.behaviourInCard = diceBehaviour.Copy();
+		battleDiceBehavior.behaviourInSkill = diceBehaviour.Copy();
 		battleDiceBehavior.SetIndex(num);
 		list.Add(battleDiceBehavior);
 		num++;
 	}
 	return list;
     }
-    private DiceSkillXmlInfo _xmlData;
+    private DiceSkillXmlInfo _xmlData = new DiceSkillXmlInfo();
     private int _curCost;
+    public DataLoader loader = new DataLoader();
 }

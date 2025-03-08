@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-// using System.Xml.Serialization;
+using System.Xml.Serialization;
 
 namespace Game_DiceSystem
 {
@@ -72,23 +72,23 @@ namespace Game_DiceSystem
             };
         }
         
-
+        [XmlAttribute("ID")]
         public int _id;
-
+        [XmlElement("Name")]
         public string skillName = "";
 
-
+        [XmlElement("TextId")]
         public int _textId = -1;
 
         public string Artwork = "";
 
         public DiceSkillSpec Spec = new DiceSkillSpec();
-
+        [XmlElement("Script")]
         public string Script = "";
 
         public string ScriptDesc = "";
-
-
+        [XmlArray("BehaviourList")]
+        [XmlArrayItem("Behaviour")]
         public List<DiceBehaviour> DiceBehaviourList = new List<DiceBehaviour>();
 
         public string SpecialEffect = "";

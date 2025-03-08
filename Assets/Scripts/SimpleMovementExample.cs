@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,7 +22,7 @@ public class SimpleMovementExample : MonoBehaviour
         if (BattlePhase)
         {
             this.transform.position = Vector2.MoveTowards(transform.position, target.transform.position, step);
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = R;
+            this.GetComponent<SpriteRenderer>().sprite = R;
         }
         if (distance < 10f)
         {
@@ -34,3 +34,4 @@ public class SimpleMovementExample : MonoBehaviour
         }
     }
 }
+*/

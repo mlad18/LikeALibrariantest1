@@ -1,5 +1,5 @@
 using System;
-// using System.Xml.Serialization;
+using System.Xml.Serialization;
 
 namespace Game_DiceSystem
 {
@@ -13,6 +13,7 @@ namespace Game_DiceSystem
                 affection = this.affection
             };
         }
+        [XmlAttribute("Cost")]
         public int Cost;
         public SkillAffection affection;
     }

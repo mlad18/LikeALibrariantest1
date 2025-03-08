@@ -1,5 +1,5 @@
 using System;
-// using System.Xml.Serialization;
+using System.Xml.Serialization;
 
 namespace Game_DiceSystem
 {
@@ -32,26 +32,27 @@ namespace Game_DiceSystem
                 Desc = this.Desc
             };
         }
-
+        [XmlAttribute]
         public int Min = 1;
-
+        [XmlAttribute]
         public int Max;
+        [XmlAttribute]
         public BehaviourType Type;
-
+        [XmlAttribute]
         public BehaviourDetail Detail;
-
+        [XmlAttribute("Motion")]
         public MotionDetail MotionDetail;
-
+        [XmlAttribute("MotionDefault")]
         public MotionDetail MotionDetailDefault = MotionDetail.N;
-
+        [XmlIgnore]
         public int KnockbackPower = 1;
-
+        [XmlAttribute]
         public string EffectRes = "";
-
+        [XmlAttribute]
         public string Script = "";
-
+        [XmlAttribute]
         public string ActionScript = "";
-
+        [XmlAttribute]
         public string Desc = "";
 
     }

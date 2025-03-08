@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceSkillXmlRoot>
+	<Skill ID="1001">
+	 <Name>Slash1</Name>
+	 <Spec Cost="0"/>
+	 <BehaviourList>
+	  <Behaviour Min="3" Max="4" Type="Atk" Detail="Slash" Motion="S" />
+          <Behaviour Min="5" Max="6" Type="Atk" Detail="Slash" Motion="S" />
+	 </BehaviourList>
+	</Skill>
+	<Skill ID="1002">
+	 <Name>Dodge</Name>
+	 <Spec Cost="0"/>
+	 <BehaviourList>
+	  <Behaviour Min="4" Max="6" Type="Def" Detail="Evade" Motion="E" />
+	 </BehaviourList>
+	</Skill>
+	<Skill ID="1003">
+	 <Name>Light Defense</Name>
+	 <Spec Cost="0"/>
+	 <BehaviourList>
+	  <Behaviour Min="2" Max="3" Type="Def" Detail="Evade" Motion="E" />
+	  <Behaviour Min="1" Max="3" Type="Def" Detail="Guard" Motion="G" />
+	  <Behaviour Min="1" Max="2" Type="Atk" Detail="Pierce" Motion="P" />
+	 </BehaviourList>
+	</Skill>
+	<Skill ID="1004">
+	 <Name>GuaranteeLose3</Name>
+	 <Spec Cost="0"/>
+	 <BehaviourList>
+	  <Behaviour Min="1" Max="1" Type="Atk" Detail="Slash" Motion="S" />
+	  <Behaviour Min="1" Max="1" Type="Atk" Detail="Slash" Motion="S" />
+	  <Behaviour Min="1" Max="1" Type="Atk" Detail="Slash" Motion="S" />
+	 </BehaviourList>
+	</Skill>
+	<Skill ID="1005">
+	 <Name>Guardtest2</Name>
+	 <Spec Cost="0"/>
+	 <BehaviourList>
+	  <Behaviour Min="1" Max="2" Type="Def" Detail="Guard" Motion="G" />
+	  <Behaviour Min="4" Max="6" Type="Def" Detail="Guard" Motion="G" />
+	 </BehaviourList>
+	</Skill>
+	<Skill ID="1006">
+	 <Name>Instakill</Name>
+	 <Spec Cost="0"/>
+	 <BehaviourList>
+	  <Behaviour Min="500" Max="500" Type="Atk" Detail="Slash" Motion="S" />
+	 </BehaviourList>
+	</Skill>
+</DiceSkillXmlRoot>
